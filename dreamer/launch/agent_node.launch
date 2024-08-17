@@ -1,0 +1,32 @@
+<launch>
+    <!-- Agent Parameters -->
+    <param name="algorithm" value="dreamer" type="string"/>
+    <param name="checkpoint" value="/home/kangjehun/catkin_ws/src/interface/dreamer/checkpoint/austria_dreamer" type="string"/>
+    <param name="actor_version" value="default" type="string"/> <!-- [normalized, default] -->>
+
+    <!-- Steer Parameters -->
+    <param name="steer_input_min" value="-1.0" type="double"/>
+    <param name="steer_input_max" value="1.0" type="double"/>
+    <param name="steer_output_min" value="1100" type="int"/>
+    <param name="steer_output_max" value="1600" type="int"/>
+
+    <!-- Motor Parameters -->
+    <param name="motor_input_min" value="-1.0" type="double"/>
+    <param name="motor_input_max" value="1.0" type="double"/>
+    <param name="motor_output_min" value="1100" type="int"/>
+    <param name="motor_output_max" value="1900" type="int"/>
+
+    <!-- Other Parameters -->
+    <param name="scan_topic" value="/scan" type="string"/>
+
+    <!-- Tuning Parameters -->
+    <param name="config_acc" value="5" type="int"/>
+    <param name="config_dec" value="30" type="int"/>
+    <param name="median_filter" value="False" type="bool"/>
+    <param name="lpf_steer" value="False" type="bool"/>
+    <param name="lpf_motor" value="True" type="bool"/>
+    <param name="verbose" value="False" type="bool"/>
+
+    <!-- Node Declaration -->
+    <node name="dreamer_agent_node" pkg="dreamer" type="agent_node.py" output="screen"/>
+</launch>

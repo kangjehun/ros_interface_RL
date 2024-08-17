@@ -1,0 +1,10 @@
+tensorflow==2.10.0
+numpy==1.23.5
+protobuf==3.19.6
+onnx==1.11.0
+scipy==1.9.3
+tensorflow_probability==0.17.0
+imageio==2.9.0
+imageio-ffmpeg==0.4.5
+Pillow==8.4.0
+DateTime==4.3
